@@ -4,7 +4,7 @@ mkfs.ext4 /dev/sda1 && mkfs.ext4 /dev/sda3 && mkfs.ext4 /dev/sda4 && mkswap /dev
 && swapon /dev/sda2 && mount /dev/sda3 /mnt
 && mkdir /mnt/{boot,home} && mount /dev/sda1 /mnt/boot && mount /dev/sda4 /mnt/home
 
-&& reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+&& reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist
 && 
 pacstrap /mnt base base-devel pacman-contrib && pacstrap /mnt zip unzip p7zip vim mc alsa-utils syslog-ng mtools dosfstools lsb-release ntfs-3g exfat-utils bash-completion linux-lts intel-ucode
 && 
